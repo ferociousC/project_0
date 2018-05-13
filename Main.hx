@@ -11,12 +11,13 @@ class Main {
   	var i = 5;
   	var kyno = '';
   	var chron = gitcoal(quant, kyno);
-  	gitcoal(q2ant, kyno);
-	act_1(chron);
+  	var strua = gitcoal(q2ant, kyno);
+	act_1(chron, strua);
 
    }
 
-		   static public function act_1(mist:Int){
+		   static public function act_1(mist:Int, dome:Int){
+		   		var command_m2 = ['checkout', '-b', 'feature-$']; 
 			  	var command_m1 = ['checkout', 'development'];
 				var command_0 = ['status'];
 			  	var command_1 = ['add', '*'];
