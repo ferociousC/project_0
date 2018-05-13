@@ -14,7 +14,6 @@ class Thehappenings {
 	  	}
 	  	return chr0n;
 	} 
-
 	static public function clientele(a:String, b:Array<String>) {
 			trace('Warring: ' + b);
 			var process_4 = new sys.io.Process('$a', b);
@@ -27,7 +26,6 @@ class Thehappenings {
 			trace("Warning: " + commitHash_4);
 	}
 }
-
 class Main {
   static public function main():Void {
 	var quant:String = './chronicl.dt';
@@ -35,30 +33,15 @@ class Main {
   	var kyno = '';
   	var chron = Thehappenings.gitcoal(quant, kyno);
 
-	var process_0 = new sys.io.Process('git', ['status']);
-	if (process_0.exitCode() != 0) {
-	  var message = process_0.stderr.readAll().toString();
-	  var pos = haxe.macro.Context.currentPos();
-	  haxe.macro.Context.error("Cannot execute process_0. " + message, pos);
-	};
-	var commitHash_0 = process_0.stdout.readAll();
-	trace("Warning: " + commitHash_0);
 
-   var process_2 = new sys.io.Process('git', ['add', '*']);
-   var commitHash_2 = process_2.stdout.readAll();
-   trace("Warning: " + commitHash_2);
+  	var command_0 = ['status'];
+  	var command_1 = ['add', '*'];
+  	var command_2 = ['commit', '-am', 'Starting Garbage $chron'];
+  	var command_3 = ['push', 'origin', 'development'];
 
-	var process_3 = new sys.io.Process('git', ['commit', '-am', 'Starting Garbage $chron']);
-	if (process_3.exitCode() != 0) {
-	var message = process_3.stderr.readAll().toString();
-	var pos = haxe.macro.Context.currentPos();
-	haxe.macro.Context.error("Cannot execute process_3 . " + message, pos);
-	};
-	var commitHash_3 = process_3.stdout.readAll();
-	trace("Warning: " + commitHash_3);
-
-	var command_4 = ['push', 'origin', 'development'];
-	Thehappenings.clientele('git', command_4);
-   	
+  	Thehappenings.clientele('git', command_0);
+  	Thehappenings.clientele('git', command_1);
+  	Thehappenings.clientele('git', command_2);
+  	Thehappenings.clientele('git', command_3);
    }
 }
