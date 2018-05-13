@@ -17,7 +17,7 @@ class Thehappenings {
 
 	static public function clientele(args) {
 
-			var process_4 = new sys.io.Process('$Std.string(args)');
+			var process_4 = new sys.io.Process(Std.string(args));
 			if (process_4.exitCode() != 0) {
 			var message = process_4.stderr.readAll().toString();
 			var pos = haxe.macro.Context.currentPos();
