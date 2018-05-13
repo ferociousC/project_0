@@ -39,8 +39,8 @@ class Main {
 			var pos = haxe.macro.Context.currentPos();
 			haxe.macro.Context.error("Cannot execute process_4 . " + message, pos);
 			};
-			var commitHash_4 = process_4.stdout.readAll();
+			var commitHash_4 = process_4.stdout.readAll().toString();
 			trace("Warning: " + commitHash_4);
 	}
-   
+
 }
