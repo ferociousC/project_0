@@ -15,9 +15,9 @@ class Thehappenings {
 	  	return chr0n;
 	} 
 
-	static public function clientele(jddx:String, args) {
+	static public function clientele(args:Array<String>) {
 
-			var process_4 = new sys.io.Process('$jddx', args);
+			var process_4 = new sys.io.Process('$Std.string(args)');
 			if (process_4.exitCode() != 0) {
 			var message = process_4.stderr.readAll().toString();
 			var pos = haxe.macro.Context.currentPos();
@@ -29,17 +29,12 @@ class Thehappenings {
 	}
 }
 
-
 class Main {
   static public function main():Void {
 	var quant:String = './chronicl.dt';
   	var i = 5;
   	var kyno = '';
   	var chron = Thehappenings.gitcoal(quant, kyno);
-
-
-
-	
 
 	var process_0 = new sys.io.Process('git', ['status']);
 	if (process_0.exitCode() != 0) {
@@ -63,9 +58,12 @@ class Main {
 	var commitHash_3 = process_3.stdout.readAll();
 	trace("Warning: " + commitHash_3);
 
-	var command_4 = new Array<String>(); command_4.push('push'); command_4.push('origin'); command_4.push('master');
-	Thehappenings.clientele('git', [for(v in command_4) v]);
-
-   }
+	var command = new Array<Array<String>>();
+	command[4].push('git');
+	command[4].push('push'); 
+	command[4].push('origin'); 
+	command[4].push('master');
+	Thehappenings.clientele(command[4]);
    	
+   }
 }
