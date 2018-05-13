@@ -1,13 +1,13 @@
 class Thehappenings {
-	static public function gitcoal(axmd:String, bxmd:String) {
-		bxmd = sys.io.File.getContent(axmd); 
-	  	var chr0n = Std.parseInt(bxmd);
-	  	if (bxmd != '' && chr0n != 0 ) {
+	static public function gitcoal(jxmd:String, kxmd:String) {
+		kxmd = sys.io.File.getContent(jxmd); 
+	  	var chr0n = Std.parseInt(kxmd);
+	  	if (kxmd != '' && chr0n != 0 ) {
 	  	chr0n++;
 		trace(chr0n);
 		trace('well $chr0n');
-	  	bxmd = Std.string(chr0n);
-	  	sys.io.File.saveContent(axmd, bxmd);
+	  	kxmd = Std.string(chr0n);
+	  	sys.io.File.saveContent(jxmd, kxmd);
 	 	} else {
 	  		chr0n = 1;
 	  		sys.io.File.append ('1');
@@ -15,9 +15,9 @@ class Thehappenings {
 	  	return chr0n;
 	} 
 
-	static public function clientele(addx:String, bddx:Array<String>) {
-			
-			var process_4 = new sys.io.Process(addx, bddx);
+	static public function clientele(jddx:String, args) {
+
+			var process_4 = new sys.io.Process('$jddx', args);
 			if (process_4.exitCode() != 0) {
 			var message = process_4.stderr.readAll().toString();
 			var pos = haxe.macro.Context.currentPos();

@@ -8,3 +8,5 @@
 	var commitHash_1:String = process_1.stdout.readLine();
 	trace("Warning: " + commitHash_1);
 	
+
+				var btext:String = bddx.join(" ");
