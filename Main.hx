@@ -40,7 +40,7 @@ class Main {
 			haxe.macro.Context.error("Cannot execute process_4 . " + message, pos);
 			};
 			var commitHash_4 = process_4.stdout.readAll();
-			trace("Warning: " + commitHash_4);
+			return("Warning: " + commitHash_4);
 	}
-   
+
 }
