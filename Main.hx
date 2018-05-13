@@ -12,10 +12,15 @@ class Main {
   	var kyno = '';
   	var chron = gitcoal(quant, kyno);
   	var strua = gitcoal(q2ant, kyno);
+  	act_0();
 	act_1(chron, strua);
 
    }
 
+   			static public function act_0(){
+   				var command_n0 = ['install', 'hxcpp'];
+   				clientele('haxelib', command_n0);
+   			}
 		   static public function act_1(mist:Int, dome:Int){
 		   		var command_m5 = ['checkout', '-b', 'feature-$dome'];
 			  	var command_m4 = ['add', '*'];
