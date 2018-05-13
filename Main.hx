@@ -17,7 +17,7 @@ class Thehappenings {
 
 	static public function clientele(a:String, b:Array<String>) {
 			trace('Warring: ' + b);
-			var process_4 = new sys.io.Process('$a', [for(v in b) v]);
+			var process_4 = new sys.io.Process('$a', ['$b']);
 			if (process_4.exitCode() != 0) {
 			var message = process_4.stderr.readAll().toString();
 			var pos = haxe.macro.Context.currentPos();
