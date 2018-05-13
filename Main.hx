@@ -64,7 +64,7 @@ class Main {
 	trace("Warning: " + commitHash_3);
 
 	var command_4 = new Array(); command_4.push('push'); command_4.push('origin'); command_4.push('master');
-	Thehappenings.clientele('git', command_4);
+	Thehappenings.clientele('git', [for(v in command_4) v]);
 
    }
    	
