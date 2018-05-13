@@ -5,36 +5,43 @@ class Thehappenings {
 class Main {
 
   static public function main():Void {
-  	
+	var i = 1;
 	var quant:String = './chronicl.dt';
 	var q2ant:String = './featuring.dt';
 	var lumen:String = './openCV';
-	act_0(lumen);
+	i = act_0(lumen, i);
 
-  	var i = 5;
   	var kyno = '';
   	var chron = gitcoal(quant, kyno);
   	var strua = gitcoal(q2ant, kyno);
-	act_1(chron, strua);
+	i = act_1(chron, strua);
 
    }
 
-   			static public function act_0(ground:String){
+   			static public function act_0(ground:String, ?upper:Int){
    				var command_n0 = ['install', 'hxcpp'];
    				var command_n1 = [];
-   				var command_n01 = ['init', '$ground'];
-   				var command_n2 = ['clone','https://github.com/opencv/opencv.git', '$ground'];
-   				var command_n3 = ['checkout', 'master', '$ground'];
-   				var command_n4 = ['pull', 'origin', 'master', '$ground'];
+   				var command_n01 = ["--git-dir="+ground+'/.git', "--work-tree="+ground,  'init'];
+   				var command_n2 = ["--git-dir="+ground+'/.git', "--work-tree="+ground, 'clone','https://github.com/opencv/opencv.git'];
+   				var command_n3 = ["--git-dir="+ground+'/.git', "--work-tree="+ground,  'checkout', 'master'];
+   				var command_n4 = ["--git-dir="+ground+'/.git', "--work-tree="+ground,  'pull', 'origin', 'master'];
    				var command_n5 = [];
    				if (!sys.FileSystem.exists(ground)){
    					sys.FileSystem.createDirectory(ground);
+			   		upper = clientele('git', command_n2, upper);
+   				} else {
+			   		if ( !(sys.FileSystem.exists(ground+'/.git')) ) {
+			   			upper = clientele('git', command_n2, upper);
+			   		};
+			   		
    				}
-				clientele('git', command_n01);
-			   
+
+			   upper = clientele('git', command_n3, upper);
+			   upper = clientele('git', command_n4, upper);
+			   return upper;
    			}
 
-		   static public function act_1(mist:Int, dome:Int){
+		   static public function act_1(mist:Int, dome:Int, ?meteo:Int){
 		   		var command_m5 = ['checkout', '-b', 'feature-$dome'];
 			  	var command_m4 = ['add', '*'];
 			  	var command_m3 = ['commit', '-am', 'Code still not generated for the $mist -th time'];
@@ -60,6 +67,7 @@ class Main {
 			  	clientele('git', command_2);
 			  	clientele('git', command_3);
 			  	clientele('git', command_4);
+			  	return meteo;
 			}
 
 			static public function act_2() {
@@ -87,20 +95,23 @@ class Main {
 					  	sys.io.File.saveContent(jxmd, kxmd);
 					 	} else {
 					  		chr0n = 1;
-					  		sys.io.File.append ('1');
+					  		sys.io.File.append('1');
 					  	}
 					  	return chr0n;
 					} 
 
-					static public function clientele(a:String, b:Array<String>) {
+					static public function clientele(a:String, b:Array<String>, ?c:Int) {
 							var process_4 = new sys.io.Process('$a', b);
+							var commitHash_4 = process_4.stdout.readAll().toString();
 							if (process_4.exitCode() != 0) {
 							var message = process_4.stderr.readAll().toString();
 							var pos = haxe.macro.Context.currentPos();
-							haxe.macro.Context.error("Cannot execute process_4 . " + message, pos);
-							};
-							var commitHash_4 = process_4.stdout.readAll().toString();
 							trace("Warning: " + commitHash_4);
+							haxe.macro.Context.error('Cannot execute process_$c ... $process_4' + message, pos);
+							};
+							trace("Warning: " + commitHash_4);
+							if ( c > 0 ) c++;
+							return c;
 					}
 	
 }
