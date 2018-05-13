@@ -15,7 +15,7 @@ class Thehappenings {
 	  	return chr0n;
 	} 
 
-	static public function clientele(a:String, b:Null<Array<String>>) {
+	static public function clientele(a:String, b:Array<String>) {
 			
 			var process_4 = new sys.io.Process('$a');
 			if (process_4.exitCode() != 0) {
