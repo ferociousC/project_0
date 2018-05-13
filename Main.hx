@@ -1,4 +1,21 @@
 class Thehappenings {
+
+}
+class Main {
+  static public function main():Void {
+	var quant:String = './chronicl.dt';
+  	var i = 5;
+  	var kyno = '';
+  	var chron = gitcoal(quant, kyno);
+  	var command_0 = ['status'];
+  	var command_1 = ['add', '*'];
+  	var command_2 = ['commit', '-am', 'Starting Garbage $chron'];
+  	var command_3 = ['push', 'origin', 'development'];
+  	clientele('git', command_0);
+  	clientele('git', command_1);
+  	clientele('git', command_2);
+  	clientele('git', command_3);
+   }
 	static public function gitcoal(jxmd:String, kxmd:String) {
 		kxmd = sys.io.File.getContent(jxmd); 
 	  	var chr0n = Std.parseInt(kxmd);
@@ -25,23 +42,5 @@ class Thehappenings {
 			var commitHash_4 = process_4.stdout.readAll();
 			trace("Warning: " + commitHash_4);
 	}
-}
-class Main {
-  static public function main():Void {
-	var quant:String = './chronicl.dt';
-  	var i = 5;
-  	var kyno = '';
-  	var chron = Thehappenings.gitcoal(quant, kyno);
-
-
-  	var command_0 = ['status'];
-  	var command_1 = ['add', '*'];
-  	var command_2 = ['commit', '-am', 'Starting Garbage $chron'];
-  	var command_3 = ['push', 'origin', 'development'];
-
-  	Thehappenings.clientele('git', command_0);
-  	Thehappenings.clientele('git', command_1);
-  	Thehappenings.clientele('git', command_2);
-  	Thehappenings.clientele('git', command_3);
-   }
+   
 }
