@@ -9,7 +9,7 @@ class Main {
 	var quant:String = './chronicl.dt';
 	var q2ant:String = './featuring.dt';
 	var lumen:String = './openCV';
-	i = act_0(lumen, i);
+	i = act_0(lumen, 'https://github.com/opencv/opencv.git', i);
 
   	var kyno = '';
   	var chron = gitcoal(quant, kyno);
@@ -18,11 +18,11 @@ class Main {
 
    }
 
-   			static public function act_0(ground:String, ?upper:Int){
+   			static public function act_0(ground:String, pillar:String, ?upper:Int){
    				var command_n0 = ['install', 'hxcpp'];
    				var command_n1 = [];
    				var command_n01 = ["--git-dir="+ground+'/.git', "--work-tree="+ground,  'init'];
-   				var command_n2 = ["--git-dir="+ground+'/.git', "--work-tree="+ground, 'clone','https://github.com/opencv/opencv.git'];
+   				var command_n2 = ["--git-dir="+ground+'/.git', "--work-tree="+ground, 'clone', pillar];
    				var command_n3 = ["--git-dir="+ground+'/.git', "--work-tree="+ground,  'checkout', 'master'];
    				var command_n4 = ["--git-dir="+ground+'/.git', "--work-tree="+ground,  'pull', 'origin', 'master'];
    				var command_n5 = [];
