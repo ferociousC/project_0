@@ -1,6 +1,7 @@
 class Thehappenings {
 
 }
+
 class Main {
   static public function main():Void {
 	var quant:String = './chronicl.dt';
@@ -24,6 +25,7 @@ class Main {
   	clientele('git', command_5);
   	clientele('git', command_6);
    }
+
 	static public function gitcoal(jxmd:String, kxmd:String) {
 		kxmd = sys.io.File.getContent(jxmd); 
 	  	var chr0n = Std.parseInt(kxmd);
