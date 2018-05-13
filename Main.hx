@@ -8,8 +8,8 @@ class Main {
 	var i = 1;
 	var quant:String = './chronicl.dt';
 	var q2ant:String = './featuring.dt';
-	var lumen:String = './openCV';
-	i = act_0(lumen, 'https://github.com/opencv/opencv.git', i);
+	var lumen:Array<String> = ['./openCV', 'https://github.com/opencv/opencv.git'];
+	i = act_0(lumen[0], lumen[1] , i);
 
   	var kyno = '';
   	var chron = gitcoal(quant, kyno);
