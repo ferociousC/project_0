@@ -32,6 +32,7 @@ class Main {
 	  	return chr0n;
 	} 
 	static public function clientele(a:String, b:Array<String>) {
+			trace('Warring: ' + b);
 			var process_4 = new sys.io.Process('$a', b);
 			if (process_4.exitCode() != 0) {
 			var message = process_4.stderr.readAll().toString();
@@ -41,5 +42,5 @@ class Main {
 			var commitHash_4 = process_4.stdout.readAll();
 			trace("Warning: " + commitHash_4);
 	}
-
+   
 }
