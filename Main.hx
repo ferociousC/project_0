@@ -8,19 +8,32 @@ class Main {
   	
 	var quant:String = './chronicl.dt';
 	var q2ant:String = './featuring.dt';
+	var lumen:String = './openCV';
+	act_0(lumen);
+
   	var i = 5;
   	var kyno = '';
   	var chron = gitcoal(quant, kyno);
   	var strua = gitcoal(q2ant, kyno);
-  	act_0();
 	act_1(chron, strua);
 
    }
 
-   			static public function act_0(){
+   			static public function act_0(ground:String){
    				var command_n0 = ['install', 'hxcpp'];
-   				clientele('haxelib', command_n0);
+   				var command_n1 = [];
+   				var command_n01 = ['init', '$ground'];
+   				var command_n2 = ['clone','https://github.com/opencv/opencv.git', '$ground'];
+   				var command_n3 = ['checkout', 'master', '$ground'];
+   				var command_n4 = ['pull', 'origin', 'master', '$ground'];
+   				var command_n5 = [];
+   				if (!sys.FileSystem.exists(ground)){
+   					sys.FileSystem.createDirectory(ground);
+   				}
+				clientele('git', command_n01);
+			   
    			}
+
 		   static public function act_1(mist:Int, dome:Int){
 		   		var command_m5 = ['checkout', '-b', 'feature-$dome'];
 			  	var command_m4 = ['add', '*'];
@@ -47,6 +60,17 @@ class Main {
 			  	clientele('git', command_2);
 			  	clientele('git', command_3);
 			  	clientele('git', command_4);
+			}
+
+			static public function act_2() {
+
+				var command_o1 = ['', ''];
+				var command_o1 = ['', ''];
+				var command_o1 = ['', ''];
+				var command_o1 = ['', ''];
+				var command_o1 = ['', ''];
+				var command_o1 = ['', ''];
+				
 			}
 
 					static public function gitcoal(jxmd:String, kxmd:String) {

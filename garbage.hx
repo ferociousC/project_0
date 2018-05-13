@@ -52,3 +52,12 @@
 			var commitHash_4 = process_4.stdout.readAll();
 			trace("Warning: " + commitHash_4);
 	*/
+
+
+
+
+	
+				clientele('git', command_n01);
+				clientele('git', command_n2);
+				clientele('git', command_n3);
+				clientele('git', command_n4);
