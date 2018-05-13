@@ -7,18 +7,22 @@ class Main {
   	var i = 5;
   	var kyno = '';
   	var chron = gitcoal(quant, kyno);
-  	var command_0 = ['status'];
+	var command_m1 = ['checkout', 'development'];
+	var command_0 = ['status'];
   	var command_1 = ['add', '*'];
   	var command_2 = ['commit', '-am', 'Starting Garbage $chron'];
   	var command_3 = ['push', 'origin', 'development'];
-	var command_5 = ['checkout', 'origin', 'master'];
-	var command_4 = ['merge', 'development'];
-
+	var command_4 = ['checkout', 'master'];
+	var command_5 = ['merge', 'development'];
+	var command_6 = ['push', 'origin', 'master'];
+  	clientele('git', command_m1);
 	clientele('git', command_0);
   	clientele('git', command_1);
   	clientele('git', command_2);
   	clientele('git', command_3);
   	clientele('git', command_4);
+  	clientele('git', command_5);
+  	clientele('git', command_6);
    }
 	static public function gitcoal(jxmd:String, kxmd:String) {
 		kxmd = sys.io.File.getContent(jxmd); 
