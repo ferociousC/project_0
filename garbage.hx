@@ -11,3 +11,18 @@
 
 				var btext:String = bddx.join(" ");
 	command[4].push('git');
+
+
+
+
+
+
+	/*		var process_4 = new sys.io.Process('$a', [for(v in b[key]) v.toString() + ' ']);
+			if (process_4.exitCode() != 0) {
+			var message = process_4.stderr.readAll().toString();
+			var pos = haxe.macro.Context.currentPos();
+			haxe.macro.Context.error("Cannot execute process_4 . " + message, pos);
+			};
+			var commitHash_4 = process_4.stdout.readAll();
+			trace("Warning: " + commitHash_4);
+	*/
