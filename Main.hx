@@ -11,22 +11,7 @@ class Main {
   	var chron = gitcoal(quant, kyno);
   	gitcoal(q2ant, kyno);
 
-	var command_m1 = ['checkout', 'development'];
-	var command_0 = ['status'];
-  	var command_1 = ['add', '*'];
-  	var command_2 = ['commit', '-am', 'Starting Garbage $chron'];
-  	var command_3 = ['push', 'origin', 'development'];
-	var command_4 = ['checkout', 'master'];
-	var command_5 = ['merge', 'development'];
-	var command_6 = ['push', 'origin', 'master'];
-  	clientele('git', command_m1);
-	clientele('git', command_0);
-  	clientele('git', command_1);
-  	clientele('git', command_2);
-  	clientele('git', command_3);
-  	clientele('git', command_4);
-  	clientele('git', command_5);
-  	clientele('git', command_6);
+	act_1(chron);
    }
 
 	static public function gitcoal(jxmd:String, kxmd:String) {
@@ -57,5 +42,22 @@ class Main {
 			var commitHash_4 = process_4.stdout.readAll().toString();
 			trace("Warning: " + commitHash_4);
 	}
-
+	static public function act_1(mist:Int){
+	  	var command_m1 = ['checkout', 'development'];
+		var command_0 = ['status'];
+	  	var command_1 = ['add', '*'];
+	  	var command_2 = ['commit', '-am', 'Starting Garbage $mist'];
+	  	var command_3 = ['push', 'origin', 'development'];
+		var command_4 = ['checkout', 'master'];
+		var command_5 = ['merge', 'development'];
+		var command_6 = ['push', 'origin', 'master'];
+	  	clientele('git', command_m1);
+		clientele('git', command_0);
+	  	clientele('git', command_1);
+	  	clientele('git', command_2);
+	  	clientele('git', command_3);
+	  	clientele('git', command_4);
+	  	clientele('git', command_5);
+	  	clientele('git', command_6);
+	}
 }
