@@ -11,10 +11,12 @@ class Main {
   	var command_1 = ['add', '*'];
   	var command_2 = ['commit', '-am', 'Starting Garbage $chron'];
   	var command_3 = ['push', 'origin', 'development'];
-  	clientele('git', command_0);
+	var command_4 = ['merge', 'origin', 'master'];
+	clientele('git', command_0);
   	clientele('git', command_1);
   	clientele('git', command_2);
   	clientele('git', command_3);
+  	clientele('git', command_4);
    }
 	static public function gitcoal(jxmd:String, kxmd:String) {
 		kxmd = sys.io.File.getContent(jxmd); 
