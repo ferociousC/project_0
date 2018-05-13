@@ -15,8 +15,8 @@ class Thehappenings {
 	  	return chr0n;
 	} 
 
-	static public function clientele(a:String, b:Array<Array<String>>, key:Int) {
-			trace('Warring: ' + b[key]);
+	static public function clientele(a:String, b:Array<String>) {
+			trace('Warring: ' + b);
 
 	}
 }
@@ -50,11 +50,11 @@ class Main {
 	var commitHash_3 = process_3.stdout.readAll();
 	trace("Warning: " + commitHash_3);
 
-	var command = new Array<Array<String>>();
-	command[4].push('push'); 
-	command[4].push('origin'); 
-	command[4].push('master');
-	Thehappenings.clientele('git', command, 4);
+	var command_4 = new Array<String>();
+	command_4.push('push'); 
+	command_4.push('origin'); 
+	command_4.push('master');
+	Thehappenings.clientele('git', command_4);
    	
    }
 }
