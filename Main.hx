@@ -34,7 +34,7 @@ class Main {
    var commitHash_2 = process_2.stdout.readAll();
    trace("Warning: " + commitHash_2);
 
-	var process_3 = new sys.io.Process('git', ['commit', '-am', 'Starting Garbage $chron i gotta make something to rewrite this number']);
+	var process_3 = new sys.io.Process('git', ['commit', '-am', 'Starting Garbage $chron']);
 	if (process_3.exitCode() != 0) {
 	var message = process_3.stderr.readAll().toString();
 	var pos = haxe.macro.Context.currentPos();
