@@ -15,9 +15,9 @@ class Thehappenings {
 	  	return chr0n;
 	} 
 
-	static public function clientele(args) {
+	static public function clientele(a:String, b:Array<String>) {
 
-			var process_4 = new sys.io.Process(Std.string(args));
+			var process_4 = new sys.io.Process('$a', [for(v in b) ' $v']);
 			if (process_4.exitCode() != 0) {
 			var message = process_4.stderr.readAll().toString();
 			var pos = haxe.macro.Context.currentPos();
@@ -59,11 +59,10 @@ class Main {
 	trace("Warning: " + commitHash_3);
 
 	var command = new Array<Array<String>>();
-	command[4].push('git');
 	command[4].push('push'); 
 	command[4].push('origin'); 
 	command[4].push('master');
-	Thehappenings.clientele(command[4]);
+	Thehappenings.clientele('git', command[4]);
    	
    }
 }

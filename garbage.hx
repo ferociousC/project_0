@@ -10,3 +10,4 @@
 	
 
 				var btext:String = bddx.join(" ");
+	command[4].push('git');
