@@ -5,9 +5,12 @@ class Thehappenings {
 class Main {
   static public function main():Void {
 	var quant:String = './chronicl.dt';
+	var q2ant:String = './featuring.dt';
   	var i = 5;
   	var kyno = '';
   	var chron = gitcoal(quant, kyno);
+  	gitcoal(q2ant, kyno);
+
 	var command_m1 = ['checkout', 'development'];
 	var command_0 = ['status'];
   	var command_1 = ['add', '*'];
@@ -27,6 +30,9 @@ class Main {
    }
 
 	static public function gitcoal(jxmd:String, kxmd:String) {
+		if (!sys.FileSystem.exists(jxmd)){
+			sys.io.File.saveContent(jxmd, '1');
+		}
 		kxmd = sys.io.File.getContent(jxmd); 
 	  	var chr0n = Std.parseInt(kxmd);
 	  	if (kxmd != '' && chr0n != 0 ) {
