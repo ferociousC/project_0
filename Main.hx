@@ -15,7 +15,7 @@ class Thehappenings {
 	  	return chr0n;
 	} 
 
-	static public function clientele(args:Array<String>) {
+	static public function clientele(args) {
 
 			var process_4 = new sys.io.Process('$Std.string(args)');
 			if (process_4.exitCode() != 0) {
