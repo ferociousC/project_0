@@ -17,7 +17,7 @@ class Thehappenings {
 
 	static public function clientele(a:String, b:Array<Array<String>>, key:Int) {
 			trace('Warring: ' + b[key]);
-			var process_4 = new sys.io.Process('$a', [for(v in b[key]) v.toString() + ' ']);
+	/*		var process_4 = new sys.io.Process('$a', [for(v in b[key]) v.toString() + ' ']);
 			if (process_4.exitCode() != 0) {
 			var message = process_4.stderr.readAll().toString();
 			var pos = haxe.macro.Context.currentPos();
@@ -25,7 +25,7 @@ class Thehappenings {
 			};
 			var commitHash_4 = process_4.stdout.readAll();
 			trace("Warning: " + commitHash_4);
-
+	*/
 	}
 }
 
