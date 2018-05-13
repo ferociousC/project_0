@@ -15,9 +15,9 @@ class Thehappenings {
 	  	return chr0n;
 	} 
 
-	static public function clientele(a:String, b:Array<String>) {
+	static public function clientele(addx:String, bddx:Array<String>) {
 			
-			var process_4 = new sys.io.Process(a, b);
+			var process_4 = new sys.io.Process(addx, bddx);
 			if (process_4.exitCode() != 0) {
 			var message = process_4.stderr.readAll().toString();
 			var pos = haxe.macro.Context.currentPos();
