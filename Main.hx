@@ -1,6 +1,18 @@
 class Thehappenings {
-	static public function gitcoal(props:Any) {
-
+	static public function gitcoal(axmd:String, bxmd:String) {
+		bxmd = sys.io.File.getContent(axmd); 
+	  	var chr0n = Std.parseInt(bxmd);
+	  	if (bxmd != '' && chr0n != 0 ) {
+	  	chr0n++;
+		trace(chr0n);
+		trace('well $chr0n');
+	  	bxmd = Std.string(chr0n);
+	  	sys.io.File.saveContent(axmd, bxmd);
+	 	} else {
+	  		chr0n = 1;
+	  		sys.io.File.append ('1');
+	  	}
+	  	return chr0n;
 	} 
 }
 
@@ -9,17 +21,12 @@ class Main {
   static public function main():Void {
 	var quant:String = './chronicl.dt';
   	var i = 5;
-  	var kyno:String = sys.io.File.getContent(quant); 
-  	var chron = Std.parseInt(kyno);
-  	if (kyno != '' && chron != 0 ) {
-  	chron++;
-	trace(chron);
-	trace('well $chron');
-  	kyno = Std.string(chron);
-  	sys.io.File.saveContent(quant, kyno);
- 	} else {
-  	var chronicl = sys.io.File.append ('1');
-  	}
+  	var kyno = '';
+  	var chron = Thehappenings.gitcoal(quant, kyno);
+
+
+
+	
 
 	var process_0 = new sys.io.Process('git', ['status']);
 	if (process_0.exitCode() != 0) {
