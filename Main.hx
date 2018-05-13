@@ -11,7 +11,9 @@ class Main {
   	var command_1 = ['add', '*'];
   	var command_2 = ['commit', '-am', 'Starting Garbage $chron'];
   	var command_3 = ['push', 'origin', 'development'];
-	var command_4 = ['merge', 'master'];
+	var command_5 = ['checkout', 'master'];
+	var command_4 = ['merge', 'development'];
+
 	clientele('git', command_0);
   	clientele('git', command_1);
   	clientele('git', command_2);
