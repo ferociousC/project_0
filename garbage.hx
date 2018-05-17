@@ -62,3 +62,5 @@
 				clientele('git', command_n2);
 				clientele('git', command_n3);
 				clientele('git', command_n4);
+
+				"--git-dir="+ground+'/.git/', 

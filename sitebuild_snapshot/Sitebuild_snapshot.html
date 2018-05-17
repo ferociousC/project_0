@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="description" content="">
+    <meta property="og:locale" content="en_EN">
+    <meta name="robots" content="index,follow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="initial-scale=1, minimum-scale=1, width=device-width" name="viewport">
+    <title>Sitebuild</title>
+    <meta property="og:title" content="Sitebuild">
+    <meta property="og:url" content="sitebuild.co">
+    <link href="./Sitebuild_snapshot_files/css" rel="stylesheet">
+  <style type="text/css">* {
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  margin: 0;
+  line-height: 1.285; }
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none; }
+
+.field--head {
+  max-width: 1450px;
+  margin: auto; }
+
+.field--body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  max-width: 1450px;
+  margin: 0 auto; }
+
+.flex--inlined {
+  display: flex-inline; }
+
+.content--outer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  position: relative; }
+
+.content--split {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 20px; }
+
+.control--box--split {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto; }
+
+.control--box--half {
+  padding: 0 5px;
+  width: 50%; }
+
+.space--block--quarter {
+  margin-bottom: 8px; }
+
+.space--block {
+  margin-bottom: 26px; }
+
+.space--block--half {
+  margin-bottom: 16px; }
+
+.space--block--one--half {
+  margin-bottom: 42px; }
+
+.form--box--label {
+  margin-bottom: 6px; }
+
+.content--inner {
+  overflow: hidden; }
+
+.content--whitefield {
+  background: #ffffff; }
+
+.content--rounded--tiny {
+  border-radius: 4px; }
+
+.content--part {
+  width: 100%;
+  display: block; }
+
+.content--image {
+  max-width: 100%; }
+
+.content--image--hack {
+  margin-top: -55px; }
+
+.content--image--hack--2 {
+  margin-top: -25px; }
+
+.content--overlay {
+  opacity: 0.6; }
+
+.content--yellow {
+  background-color: rgba(210, 170, 0, 0.94); }
+
+.content--green--yellow--field {
+  background-image: linear-gradient(55deg, #facd10, #55a738); }
+
+.vert--limit--200px {
+  max-height: 200px;
+  overflow: hidden; }
+
+.vert--limit--245px {
+  max-height: 245px;
+  overflow: hidden; }
+
+.content--angle--down {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 45px));
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 45px));
+  overflow: default; }
+
+.button--disabled {
+  cursor: default; }
+
+.button--hover--topleft {
+  position: absolute;
+  top: 20px;
+  left: 0px; }
+
+.button--yellow {
+  background: #facd10;
+  color: #333; }
+
+.button--blue {
+  background: #0089cf;
+  color: #fff; }
+
+.button--rounded--30 {
+  border-radius: 15px;
+  height: 30px;
+  line-height: 30px; }
+
+.button--rounded--40 {
+  border-radius: 20px;
+  height: 40px;
+  line-height: 40px; }
+
+.button--squared--40 {
+  border-radius: 0;
+  height: 40px;
+  line-height: 40px; }
+
+.button--squared--20 {
+  border-radius: 0;
+  height: 20px;
+  line-height: 20px; }
+
+.mwidth--47d56pc {
+  max-width: 47.56%; }
+
+.width--50pc {
+  width: 50%; }
+
+.width--100pc {
+  width: 100%; }
+
+.width--100pc--force {
+  min-width: 100%; }
+
+.width--100px {
+  width: 100px; }
+
+.width--150px {
+  width: 150px; }
+
+.mwidth--195px {
+  max-width: 195px; }
+
+.hidden {
+  display: none; }
+
+.control--box {
+  display: -ms-inline-flexbox;
+  display: inline-flex; }
+
+.input--gray {
+  border: 2px solid #cbcbcb;
+  line-height: 36px;
+  padding: 0 10px;
+  width: 100%; }
+
+.radio--box {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 12px; }
+
+.radio--label {
+  padding: 0 18px 0 28px;
+  border: 2px solid #cbcbcb;
+  position: relative;
+  line-height: 26px; }
+  .radio--label:before {
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    left: 9px;
+    top: 9px;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff; }
+  .radio--label:after {
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #cbcbcb;
+    border-radius: 50%; }
+  .radio--label:hover {
+    border: 2px solid #0089cf;
+    color: #0089cf; }
+    .radio--label:hover:before {
+      background-color: #cbcbcb; }
+    .radio--label:hover:after {
+      border: 2px solid #0089cf; }
+
+input:checked + .radio--label {
+  background-color: #0089cf;
+  color: #fff;
+  border: 2px solid #0089cf; }
+  input:checked + .radio--label:before {
+    background-color: #0089cf; }
+  input:checked + .radio--label:after {
+    border: 4px solid #fff; }
+
+.checkbox--box {
+  display: block;
+  margin: 7px 0 8px; }
+
+.checkbox--label {
+  padding: 0 18px 0 32px;
+  position: relative;
+  line-height: 26px; }
+  .checkbox--label:before {
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 2px solid #cbcbcb;
+    border-radius: 2px; }
+  .checkbox--label:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    background: #fff;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 0 #fff, 4px 0 0 #fff, 4px -2px 0 #fff, 4px -4px 0 #fff, 4px -6px 0 #fff, 4px -8px 0 #fff;
+    transform: rotate(45deg); }
+  .checkbox--label:hover:before {
+    border: 2px solid #0089cf; }
+  .checkbox--label:hover:after {
+    box-shadow: 2px 0 0 #cbcbcb, 4px 0 0 #cbcbcb, 4px -2px 0 #cbcbcb, 4px -4px 0 #cbcbcb, 4px -6px 0 #cbcbcb, 4px -8px 0 #cbcbcb; }
+
+input:checked + .checkbox--label:before {
+  background-color: #0089cf;
+  border: 2px solid #0089cf; }
+
+input:checked + .checkbox--label:after {
+  box-shadow: 2px 0 0 #fff, 4px 0 0 #fff, 4px -2px 0 #fff, 4px -4px 0 #fff, 4px -6px 0 #fff, 4px -8px 0 #fff; }
+
+.picker--box {
+  overflow: hidden;
+  border: 2px solid #cbcbcb; }
+
+.picker--label {
+  background: #fff;
+  line-height: 36px; }
+
+input:checked + .picker--label {
+  background: #0089cf;
+  color: #fff; }
+
+.picker--box--left {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0; }
+
+.picker--box--right {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; }
+
+h1 {
+  font-size: 30px;
+  line-height: 39px; }
+
+h2 {
+  font-size: 16px; }
+
+.text--small {
+  font-size: 12px; }
+
+.text--300 {
+  font-weight: 300; }
+
+.text--600 {
+  font-weight: 600; }
+
+.text--upp {
+  text-transform: uppercase; }
+
+.text--centered {
+  text-align: center; }
+
+.text--highlight {
+  font-size: 18px; }
+
+.text--informative {
+  border-left: 7px solid #facd10;
+  font-size: 22px;
+  padding-left: 15px;
+  padding-right: 23px; }
+
+@media only screen and (min-width: 0px) {
+  body {
+    background: #d0d0d0;
+    padding: 0 0%; }
+  .field--head {
+    padding: 14px 0px; }
+  .content--outer {
+    padding: 0 0px;
+    margin: 0 auto 0px;
+    width: 100%; }
+  .content--text {
+    padding: 0 15px; } }
+
+@media only screen and (min-width: 660px) {
+  body {
+    background: #e0e0e0;
+    padding: 0 6.25%; }
+  .field--head {
+    padding: 28px 5px; }
+  .content--outer {
+    padding: 0 5px;
+    margin: 0 auto 5px;
+    width: 50%; }
+  .content--text {
+    padding: 0 20px; } }
+
+@media only screen and (min-width: 1320px) {
+  body {
+    background: #f0f0f0;
+    padding: 0 12.5%; }
+  .field--head {
+    padding: 42px 10px; }
+  .content--outer {
+    padding: 0 10px;
+    margin: 0 auto 10px;
+    width: 33.33333%; }
+  .content--text {
+    padding: 0 25px; } }
+</style></head>
+
+  <body><script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.24.4'><\/script>".replace("HOST", location.hostname));
+//]]></script><script async="" src="./Sitebuild_snapshot_files/browser-sync-client.js.download"></script>
+
+    <fountain-app ng-version="2.4.10"><div class="field">
+	
+	<div class="field--head">
+
+		<h1 class="text text--300">
+			Nagy headline, H1
+		</h1>
+
+	</div>
+	
+	<div class="field--body">
+		
+		<div class="content--outer space--block">
+			<div class="content--inner content--whitefield content--rounded--tiny">
+
+				<div class="content content--part vert--limit--200px space--block content--relative">
+					
+					<img class="content--image content--image--hack" src="./Sitebuild_snapshot_files/manual.png">
+					
+				</div>
+				<form name="Form_1">
+					<div class="content content--split space--block">
+						<div class="control control--box--split control--box--half">
+							<div class="form--box--label">
+								<p class="text text--small">
+									Form 1
+								</p>
+							</div>
+							<div class="content content--part ">
+								<input class="input input--gray text--input mwidth--195px" id="text-1" type="text">
+							</div>
+						</div>
+						<div class="control control--box--split control--box--half">
+							<div class="form--box--label">
+								<p class="text text--small">
+									Form 1
+								</p>
+							</div>
+							<div class="content content--part ">
+								<input class="input input--gray text--input mwidth--195px" id="text-1" type="text">
+							</div>
+						</div>
+					</div>
+
+					<div class="content content--part content--text space--block">
+						<div class="form--box--label">
+							<p class="text text--small">
+							Radio választás
+							</p>
+						</div>
+						<div class="radio--box space--block--half">
+							<input class="hidden" id="radio-1" name="some-radio" type="radio">
+							<label class="text radio--label button--rounded--30" for="radio-1">
+								Inaktív
+							</label>
+						</div>
+						<div class="radio--box space--block--half">
+							<input class="hidden" id="radio-2" name="some-radio" type="radio">
+							<label class="text radio--label button--rounded--30" for="radio-2">
+								Hover		
+							</label>
+						</div>
+						<div class="radio--box space--block--half">
+							<input class="hidden" id="radio-3" name="some-radio" type="radio">
+							<label class="text radio--label button--rounded--30" for="radio-3">
+								Selected
+							</label>
+						</div>
+					</div>
+
+					<div class="content content--part content--text space--block--half">
+						<div class="checkbox--box space--block--half">
+							<input class="hidden" id="checkbox-1" name="some-checkbox" type="checkbox">
+							<label class="text checkbox--label button--squared--20 text--small" for="checkbox-1">
+								Kikapcsolt checkbox
+							</label>
+						</div>
+						<div class="checkbox--box space--block--half">
+							<input class="hidden" id="checkbox-2" name="some-checkbox" type="checkbox">
+							<label class="text checkbox--label button--squared--20 text--small" for="checkbox-2">
+								Hover checkbox
+							</label>
+						</div>
+						<div class="checkbox--box space--block--half">
+							<input class="hidden" id="checkbox-3" name="some-checkbox" type="checkbox">
+							<label class="text checkbox--label button--squared--20 text--small" for="checkbox-3">
+								Bekapcsolt checkbox
+							</label>
+						</div>
+
+					</div>
+
+					<div class="content content--part content--text space--block">
+						<div class="form--box--label">
+							<p class="text text--small">
+							Picker
+							</p>
+						</div>
+						
+						<div class="picker content--split width--150px">
+							<div class="picker--box  picker--box--left control--box--split button--rounded--40 width--50pc">
+								<input class="hidden" id="picker-1" name="some-picker" type="radio">
+								<label class="text picker--label text--centered width--100pc text--small" for="picker-1">
+										Inaktív
+								</label>
+							</div>
+							<div class="picker--box picker--box--right control--box--split button--rounded--40 width--50pc">
+								<input checked="checked" class="hidden" id="picker-2" name="some-picker" type="radio">
+								<label class="text picker--label text--centered width--100pc text--small" for="picker-2">
+										Aktív
+								</label>
+							</div>
+						</div>
+					</div>
+				</form>
+				<button class="button button--hover--topleft button--blue button--rounded--30 text--600 text--upp text--centered width--100px">
+					Kiemelés
+				</button>
+			</div>
+		</div>
+		<div class="content--outer space--block">
+			<div class="content--inner content--whitefield content--rounded--tiny">
+				<div class="content content--part vert--limit--200px space--block content--yellow">
+					
+					<img class="content--image content--image--hack content--overlay" src="./Sitebuild_snapshot_files/manual.png">
+					
+				</div>
+				<div class="content content--part content--text space--block">
+					<h2 class="text text--centered text--600 space--block--quarter">
+						Kis alcím H2
+					</h2>
+					<p class="text text--centered">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					</p>
+					<p class="text text--centered">
+					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					</p>
+				</div>
+				
+				<div class="content content--part content--text space--block--one--half">
+					<p class="text text--highlight text--informative">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+					</p>
+				</div>
+
+				<div class="content content--part content--text text--centered">
+					<button class="button button--yellow button--rounded--40 width--150px text--600 text--upp text--centered">
+					Gomb
+					</button>
+				</div>
+
+				<button class="button button--hover--topleft button--yellow button--rounded--30 text--600 text--upp text--centered width--100px">
+					Kiemelés
+				</button>
+
+			</div>				
+		</div>
+	
+		<div class="content--outer space--block">
+			<div class="content--inner content--green--yellow--field content--rounded--tiny">
+				<div class="content content--part vert--limit--245px space--block content--angle--down">
+						<img class="content--image content--image--hack--2" src="./Sitebuild_snapshot_files/manual.png">
+				</div>
+				<div class="content content--part content--text">
+					<p class="text text--600">
+						:)
+					</p>
+				</div>
+			</div>
+		</div>
+	
+</div></div></fountain-app>
+  <script type="text/javascript" src="./Sitebuild_snapshot_files/index.js.download"></script>
+
+</body></html>
