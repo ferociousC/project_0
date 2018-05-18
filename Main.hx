@@ -9,11 +9,11 @@ class Main {
 	var i = 1;
 	var quant:String = './chronicl.dt';
 	var q2ant:String = './featuring.dt';
-	var lumen:Array<String> = ['./openCV', 'https://github.com/opencv/opencv.git'];
-	var aeque:Array<String> = ['./llvm', 'https://github.com/llvm-mirror/llvm.git'];
+	var lumen:Array<String> = ['./openCV', 'ssh://git@github.com/opencv/opencv.git'];
+	var aeque:Array<String> = ['./llvm', 'ssh://git@github.com/ferociousC/project_0.git'];
 
 	i = act_0(lumen[0], lumen[1], i);
-	// i = act_1(aeque[0], aeque[1], i);
+	i = act_0(aeque[0], aeque[1], i);
   	var kyno = '';
   	var chron = gitcoal(quant, kyno);
   	var strua = gitcoal(q2ant, kyno);
@@ -30,7 +30,6 @@ class Main {
    				var command_n3 = ["--git-dir="+ground+"/.git", "--work-tree="+ground,  'checkout', 'master'];
    				var command_n4 = ["--git-dir="+ground+"/.git", "--work-tree="+ground,  'pull', 'origin', 'master'];
    				
-   				upper = clientele('git', command_n00, upper);
    				if (!sys.FileSystem.exists(ground)) {
    					trace('Mark 1');
 			   		upper = clientele('git', command_n2, upper);
