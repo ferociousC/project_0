@@ -10,10 +10,10 @@ class Main {
 	var quant:String = './chronicl.dt';
 	var q2ant:String = './featuring.dt';
 	var lumen:Array<String> = ['./openCV', 'ssh://git@github.com/opencv/opencv.git'];
-	var aeque:Array<String> = ['./llvm', 'ssh://git@github.com/ferociousC/project_0.git'];
+	var aeque:Array<String> = ['./emsc', 'ssh://git@github.com/juj/emsdk.git'];
 
 	i = act_0(lumen[0], lumen[1], i);
-	i = act_0(aeque[0], aeque[1], i);
+	i = act_1(aeque[0], aeque[1], i);
   	var kyno = '';
   	var chron = gitcoal(quant, kyno);
   	var strua = gitcoal(q2ant, kyno);
@@ -40,9 +40,18 @@ class Main {
    			}
 
    			static public function act_1(bush:String, star:String, ?lower:Int){
+   				var emcc = './'+bush+'/emsdk';
+   				var command_lx1 = ['clone', star, bush];
    				var command_lx2 = ['clone', star, bush];
-   				var command_lx3 = ["--git-dir="+bush, "--work-tree="+bush,  'checkout', 'master'];
-   				var command_lx4 = ["--git-dir="+bush, "--work-tree="+bush,  'pull', 'origin', 'master'];
+
+   				var command_lx3 = ["--git-dir="+bush+"/.git", "--work-tree="+bush,  'checkout', 'master'];
+   				var command_lx4 = ["--git-dir="+bush+"/.git", "--work-tree="+bush,  'pull', 'origin', 'master'];
+   				var command_lx5 = ['update'];
+   				var command_lx6 = ['install', 'latest'];
+   				var command_lx7 = ['activate', 'latest'];
+   				var command_lx7 = ['source', './'+bush+'/emsdk_env.sh'];
+
+
    				
    				if (!sys.FileSystem.exists(bush)) {
    					trace('Warning: Mark 2');
@@ -115,13 +124,13 @@ class Main {
 
 					static public function clientele(arxm:String, ?bptl:Array<String>, ?cyrr:Int) {
 							var process_4 = new sys.io.Process('$arxm', bptl);
+							trace("Warning: " + process_4.stdout.readAll().toString());
 							var commitHash_4 = process_4.stdout.readAll().toString();
 							if (process_4.exitCode() != 0) {
 							var message = process_4.stderr.readAll().toString();
 							var pos = haxe.macro.Context.currentPos();
 							haxe.macro.Context.error('Cannot execute process_$cyrr ... $process_4' + message, pos);
 							};
-							trace("Warning: " + commitHash_4);
 							if ( cyrr > 0 ) cyrr++;
 							return cyrr;
 					}
