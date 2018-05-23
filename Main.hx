@@ -6,23 +6,25 @@ class Main {
 
   static public function main():Void {
 	
-	var i = 1;
+	var yliy = 1;
 	var quant:String = './chronicl.dt';
 	var q2ant:String = './featuring.dt';
+	var q4ant:String = './ohio.note';
 	var lumen:Array<String> = ['./openCV', 'ssh://git@github.com/opencv/opencv.git'];
 	var aeque:Array<String> = ['./emsc', 'ssh://git@github.com/juj/emsdk.git'];
 
-	i = act_0(lumen[0], lumen[1], i);
-	i = act_1(aeque[0], aeque[1], i);
+	// yliy = act_0(lumen[0], lumen[1], yliy, q4ant);
+	// yliy = act_1(aeque[0], aeque[1], yliy, q4ant);
   	var kyno = '';
   	var chron = gitcoal(quant, kyno);
   	var strua = gitcoal(q2ant, kyno);
 
-	i = act_2(chron, strua);
+	yliy = act_2(chron, strua, yliy, q4ant);
 
    }
 
-   			static public function act_0(ground:String, pillar:String, ?upper:Int){
+   			static public function act_0(ground:String, pillar:String, ?upper:Int, ?lwhr:String){
+   				temporas(upper, lwhr);
    				var command_n0 = ['install', 'hxcpp'];
 				var command_n00 = ['config', 'http.postBuffer', '1524288000'];
    				var command_n01 = ['',  'init'];
@@ -39,8 +41,9 @@ class Main {
 			   return upper;
    			}
 
-   			static public function act_1(bush:String, star:String, ?lower:Int){
-   				var emcc = './'+bush+'/emsdk';
+   			static public function act_1(bush:String, star:String, ?lower:Int, ?supr:String){
+   				temporas(lower, supr);
+   				var emcc = bush+'/emsdk.bat';
    				var command_lx1 = ['clone', star, bush];
    				var command_lx2 = ['clone', star, bush];
 
@@ -49,21 +52,27 @@ class Main {
    				var command_lx5 = ['update'];
    				var command_lx6 = ['install', 'latest'];
    				var command_lx7 = ['activate', 'latest'];
-   				var command_lx7 = ['source', './'+bush+'/emsdk_env.sh'];
+   				var command_lx8 = [bush+'/emsdk_env.bat'];
 
-
+   				trace(emcc);
    				
    				if (!sys.FileSystem.exists(bush)) {
-   					trace('Warning: Mark 2');
+   					
 			   		lower = clientele('git', command_lx2, lower);
    				};
 				lower = clientele('git', command_lx3, lower);
 			   	lower = clientele('git', command_lx4, lower);
+			   	lower = clientele( emcc, command_lx5, lower);
+			   	lower = clientele( emcc, command_lx6, lower);
+			   	lower = clientele( emcc, command_lx7, lower);
+			   	lower = clientele( 'source', command_lx8, lower);
+
 			   return lower;
    			}
 
-		   static public function act_2(mist:Int, dome:Int, ?meteo:Int){
-		   		trace('Warning: Mark 3');
+		   static public function act_2(mist:Int, dome:Int, ?meteo:Int, ?detsu:String){
+				temporas(meteo, detsu);
+				trace('Warning: Mark 3');
 		   		var command_m5 = ['checkout', '-b', 'feature-$dome'];
 			  	var command_m4a = ['add', '*'];
 			  	var command_m3 = ['commit', '-am', 'Code still not generated for the $mist -th time'];
@@ -135,4 +144,16 @@ class Main {
 							return cyrr;
 					}
 	
+					static public function temporas(?mores:Int, ?oh:String) {
+						mores++;
+						var fame = DateTools.format(Date.now(), "Year::%Y::|::Month::%m::|::Day::%d::|::Hour::%H::|::Minute::%M::|::Second::%S::");
+						trace('Current::'+fame);
+						if ( sys.FileSystem.exists(oh) ){
+							var output = sys.io.File.append(oh, false);
+							  output.writeString(fame+'\n');
+							  output.close();
+					 	} 
+					  	return mores;
+					}
+
 }
